@@ -15,10 +15,9 @@ body {
 
 h1, h2, h3 {
   font-family: 'Arial';
-  color: #2a2a2a;
 }
 
-p, input, li {
+p, textarea, input, li {
   font-family: 'Verdana', serif;
   color: #2a2a2a;
 }
@@ -33,10 +32,12 @@ h1 {
 h2 {
   font-size: 3rem;
   text-align: center;
+  color: #2a2a2a;
 }
 
 h3 {
   font-size: 2.2rem;
+  color:rgb(11, 11, 138);
 }
 
 p, li {
@@ -117,6 +118,33 @@ main {
 article {
   flex: 4;
   height:auto;
+}
+
+input[type="text"] {
+  padding: 5px;
+  width: 400px;
+  border-width: 1px;
+  border-color: darkblue;
+}
+
+input[type="email"] {
+  padding: 5px;
+  width: 400px;
+  border-width: 1px;
+  border-color: darkblue;
+}
+
+textarea {
+  font-size: 1.2rem;
+  resize: none;
+  border-width: 1px;
+  border-color: darkblue;
+}
+
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  margin-right: 15px;
 }
 
 aside {
