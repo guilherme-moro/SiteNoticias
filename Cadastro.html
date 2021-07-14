@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="scripts/env.js"></script>
+    <script src="scripts/autenticacao.js"></script>
+
+
+    <style>
+    #partecadastro{
+        text-align: center;
+    }
+    </style>
+    
+</head>
+
+  <body>
+
+    <header>
+      <h1>Página de Notícias G&V</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="Index.html">Início</a></li>
+            <li><a href="Politica.html">Política</a></li>
+            <li><a href="Saude.html">Saúde</a></li>
+            <li><a href="Educacao.html">Educação</a></li>
+            <li><a href="Contato.html">Contato</a></li>
+            <li><a href="Cadastro.html"><b>Cadastro</b></a></li>
+            <li><a href="Login.html">Login</a></li>
+        </ul>
+
+    </nav>
+
+    <main>
+
+      <article>
+        <h2>Cadastro</h2>
+        
+        <div id="partecadastro">
+
+        <form>
+        <p id="mensagemErroCadastrar"></p>
+        <p id="mensagemCadastrar"></p>
+        
+        <label for="emailCadastroId"><b>Email:</b></label>
+        <input type="email" id="emailCadastroId" placeholder="example@gmail.com" required><br><br>
+        <label for="senhaId"><b>Senha:</b></label>
+        <input type="password" id="senhaId" placeholder="senha" required><br><br>
+        
+
+        <br><br>
+        <input type="submit" onClick="criarUsuario(event);" value="Cadastrar"> 
+        </div>
+
+        </form> 
+      </article>
+
+    </main>
+
+    <footer>
+      <p><b>Desenvolvido por Guilherme Moro e Vinicius Augusto<br><br>
+        GNU General Public License v3.0</b></p>
+    </footer>
+
+  </body>
+</html>
