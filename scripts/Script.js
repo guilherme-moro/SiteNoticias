@@ -1,29 +1,4 @@
 
-function carregarNoticiasIndex(){
-    let requestURL = "http://localhost:3000/Noticias";
-    let request = new XMLHttpRequest();
-    request.open('GET',requestURL);
-    request.responseType='json';
-    request.send();
-    request.onload = function(){
-    let noticias = request.response;
-
-    document.getElementById("categoriaNoticiaIndex1").innerText = noticias.PaginaIndex[0].CATEGORIA;
-    document.getElementById("tituloNoticiaIndex1").innerText = noticias.PaginaIndex[0].TITULO;
-    document.getElementById("autorNoticiaIndex1").innerText = noticias.PaginaIndex[0].AUTOR;
-    document.getElementById("textoNoticiaIndex1").innerText = noticias.PaginaIndex[0].TEXTO;
-
-    document.getElementById("categoriaNoticiaIndex2").innerText = noticias.PaginaIndex[1].CATEGORIA;
-    document.getElementById("tituloNoticiaIndex2").innerText = noticias.PaginaIndex[1].TITULO;
-    document.getElementById("autorNoticiaIndex2").innerText = noticias.PaginaIndex[1].AUTOR;
-    document.getElementById("textoNoticiaIndex2").innerText = noticias.PaginaIndex[1].TEXTO;
-
-    document.getElementById("categoriaNoticiaIndex3").innerText = noticias.PaginaIndex[2].CATEGORIA;
-    document.getElementById("tituloNoticiaIndex3").innerText = noticias.PaginaIndex[2].TITULO;
-    document.getElementById("autorNoticiaIndex3").innerText = noticias.PaginaIndex[2].AUTOR;
-    document.getElementById("textoNoticiaIndex3").innerText = noticias.PaginaIndex[2].TEXTO;
-    }
-}
 
 function carregarNoticiasPolitica(){
     let requestURL = "http://localhost:3000/Noticias";
@@ -118,7 +93,7 @@ function carregarNoticiasEducacao(){
     }
 }
 
-function carregarNoticiasSorteadas(){
+function carregarNoticiasSorteadas1(){
     let requestURL = "http://localhost:3000/Noticias";
     let request = new XMLHttpRequest();
     request.open('GET',requestURL);
@@ -128,7 +103,7 @@ function carregarNoticiasSorteadas(){
     let noticias = request.response;
 	
 	const min = 1;
-	const max = 4;
+	const max = 5;
 
 	let sort = Math.floor(Math.random()*Math.floor(max))
 
@@ -142,15 +117,104 @@ function carregarNoticiasSorteadas(){
     document.getElementById("autorNoticiaIndex1").innerText = noticias.PaginaPolitica[0].AUTOR;
     document.getElementById("textoNoticiaIndex1").innerText = noticias.PaginaPolitica[0].TEXTO;
 	}else if(sort==2){
-	document.getElementById("categoriaNoticiaIndex1").innerText = noticias.PaginaSaude[0].CATEGORIA;
-    document.getElementById("tituloNoticiaIndex1").innerText = noticias.PaginaSaude[0].TITULO;
-    document.getElementById("autorNoticiaIndex1").innerText = noticias.PaginaSaude[0].AUTOR;
-    document.getElementById("textoNoticiaIndex1").innerText = noticias.PaginaSaude[0].TEXTO;
+	document.getElementById("categoriaNoticiaIndex1").innerText = noticias.PaginaPolitica[1].CATEGORIA;
+    document.getElementById("tituloNoticiaIndex1").innerText = noticias.PaginaPolitica[1].TITULO;
+    document.getElementById("autorNoticiaIndex1").innerText = noticias.PaginaPolitica[1].AUTOR;
+    document.getElementById("textoNoticiaIndex1").innerText = noticias.PaginaPolitica[1].TEXTO;
 	}else if(sort==3){
-	document.getElementById("categoriaNoticiaIndex1").innerText = noticias.PaginaEducacao[0].CATEGORIA;
-    document.getElementById("tituloNoticiaIndex1").innerText = noticias.PaginaEducacao[0].TITULO;
-    document.getElementById("autorNoticiaIndex1").innerText = noticias.PaginaEducacao[0].AUTOR;
-    document.getElementById("textoNoticiaIndex1").innerText = noticias.PaginaEducacao[0].TEXTO;
+	document.getElementById("categoriaNoticiaIndex1").innerText = noticias.PaginaPolitica[2].CATEGORIA;
+    document.getElementById("tituloNoticiaIndex1").innerText = noticias.PaginaPolitica[2].TITULO;
+    document.getElementById("autorNoticiaIndex1").innerText = noticias.PaginaPolitica[2].AUTOR;
+    document.getElementById("textoNoticiaIndex1").innerText = noticias.PaginaPolitica[2].TEXTO;
+    }else if(sort==4){
+    document.getElementById("categoriaNoticiaIndex1").innerText = noticias.PaginaPolitica[3].CATEGORIA;
+    document.getElementById("tituloNoticiaIndex1").innerText = noticias.PaginaPolitica[3].TITULO;
+    document.getElementById("autorNoticiaIndex1").innerText = noticias.PaginaPolitica[3].AUTOR;
+    document.getElementById("textoNoticiaIndex1").innerText = noticias.PaginaPolitica[3].TEXTO;
+    }
+}
+}
+
+function carregarNoticiasSorteadas2(){
+    let requestURL = "http://localhost:3000/Noticias";
+    let request = new XMLHttpRequest();
+    request.open('GET',requestURL);
+    request.responseType='json';
+    request.send();
+    request.onload = function(){
+    let noticias = request.response;
+	
+	const min = 1;
+	const max = 5;
+
+	let sort = Math.floor(Math.random()*Math.floor(max))
+
+	while(sort<min){
+		sort = Math.floor(Math.random()*Math.floor(max));
+	}
+	
+	if(sort==1){
+	document.getElementById("categoriaNoticiaIndex2").innerText = noticias.PaginaSaude[0].CATEGORIA;
+    document.getElementById("tituloNoticiaIndex2").innerText = noticias.PaginaSaude[0].TITULO;
+    document.getElementById("autorNoticiaIndex2").innerText = noticias.PaginaSaude[0].AUTOR;
+    document.getElementById("textoNoticiaIndex2").innerText = noticias.PaginaSaude[0].TEXTO;
+	}else if(sort==2){
+	document.getElementById("categoriaNoticiaIndex2").innerText = noticias.PaginaSaude[1].CATEGORIA;
+    document.getElementById("tituloNoticiaIndex2").innerText = noticias.PaginaSaude[1].TITULO;
+    document.getElementById("autorNoticiaIndex2").innerText = noticias.PaginaSaude[1].AUTOR;
+    document.getElementById("textoNoticiaIndex2").innerText = noticias.PaginaSaude[1].TEXTO;
+	}else if(sort==3){
+	document.getElementById("categoriaNoticiaIndex2").innerText = noticias.PaginaSaude[2].CATEGORIA;
+    document.getElementById("tituloNoticiaIndex2").innerText = noticias.PaginaSaude[2].TITULO;
+    document.getElementById("autorNoticiaIndex2").innerText = noticias.PaginaSaude[2].AUTOR;
+    document.getElementById("textoNoticiaIndex2").innerText = noticias.PaginaSaude[2].TEXTO;
+    }else if(sort==4){
+    document.getElementById("categoriaNoticiaIndex2").innerText = noticias.PaginaSaude[3].CATEGORIA;
+    document.getElementById("tituloNoticiaIndex2").innerText = noticias.PaginaSaude[3].TITULO;
+    document.getElementById("autorNoticiaIndex2").innerText = noticias.PaginaSaude[3].AUTOR;
+    document.getElementById("textoNoticiaIndex2").innerText = noticias.PaginaSaude[3].TEXTO;
+    }
+}
+}
+
+function carregarNoticiasSorteadas3(){
+    let requestURL = "http://localhost:3000/Noticias";
+    let request = new XMLHttpRequest();
+    request.open('GET',requestURL);
+    request.responseType='json';
+    request.send();
+    request.onload = function(){
+    let noticias = request.response;
+	
+	const min = 1;
+	const max = 5;
+
+	let sort = Math.floor(Math.random()*Math.floor(max))
+
+	while(sort<min){
+		sort = Math.floor(Math.random()*Math.floor(max));
+	}
+	
+	if(sort==1){
+	document.getElementById("categoriaNoticiaIndex3").innerText = noticias.PaginaEducacao[0].CATEGORIA;
+    document.getElementById("tituloNoticiaIndex3").innerText = noticias.PaginaEducacao[0].TITULO;
+    document.getElementById("autorNoticiaIndex3").innerText = noticias.PaginaEducacao[0].AUTOR;
+    document.getElementById("textoNoticiaIndex3").innerText = noticias.PaginaEducacao[0].TEXTO;
+	}else if(sort==2){
+	document.getElementById("categoriaNoticiaIndex3").innerText = noticias.PaginaEducacao[1].CATEGORIA;
+    document.getElementById("tituloNoticiaIndex3").innerText = noticias.PaginaEducacao[1].TITULO;
+    document.getElementById("autorNoticiaIndex3").innerText = noticias.PaginaEducacao[1].AUTOR;
+    document.getElementById("textoNoticiaIndex3").innerText = noticias.PaginaEducacao[1].TEXTO;
+	}else if(sort==3){
+	document.getElementById("categoriaNoticiaIndex3").innerText = noticias.PaginaEducacao[2].CATEGORIA;
+    document.getElementById("tituloNoticiaIndex3").innerText = noticias.PaginaEducacao[2].TITULO;
+    document.getElementById("autorNoticiaIndex3").innerText = noticias.PaginaEducacao[2].AUTOR;
+    document.getElementById("textoNoticiaIndex3").innerText = noticias.PaginaEducacao[2].TEXTO;
+    }else if(sort==4){
+    document.getElementById("categoriaNoticiaIndex3").innerText = noticias.PaginaEducacao[3].CATEGORIA;
+    document.getElementById("tituloNoticiaIndex3").innerText = noticias.PaginaEducacao[3].TITULO;
+    document.getElementById("autorNoticiaIndex3").innerText = noticias.PaginaEducacao[3].AUTOR;
+    document.getElementById("textoNoticiaIndex3").innerText = noticias.PaginaEducacao[3].TEXTO;
     }
 }
 }
