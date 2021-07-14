@@ -45,6 +45,17 @@ p, li {
   line-height: 1.5;
 }
 
+.titulo{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.autor{
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+
 /* estilo cabeçalho */
 
 nav, article, aside, footer {
@@ -128,6 +139,13 @@ input[type="text"] {
 }
 
 input[type="email"] {
+  padding: 5px;
+  width: 400px;
+  border-width: 1px;
+  border-color: darkblue;
+}
+
+input[type="password"] {
   padding: 5px;
   width: 400px;
   border-width: 1px;

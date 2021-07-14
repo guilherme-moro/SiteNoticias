@@ -27,6 +27,8 @@
             <li><a href="Saude.html">Saúde</a></li>
             <li><a href="Educacao.html">Educação</a></li>
             <li><a href="Contato.html"><b>Contato</b></a></li>
+            <li><a href="Cadastro.html">Cadastro</a></li>
+            <li><a href="Login.html">Login</a></li>
         </ul>
 
     </nav>
@@ -34,18 +36,25 @@
     <main>
 
       <article>
-        <h2>Fale conosco</h2>
-        <form>
+        <h2>Fale Conosco</h2>
+        
         <div id="partecontato">
+
+        <form action="http://formmail.kinghost.net/formmail.cgi" method="POST"> 
+        <input type="hidden" name="recipient" value="guilherme.fer.moro@gmail.com">  
+        <input type="hidden" name="subject" value="teste de assunto">  
+        <input type="hidden" name="email" value="projetowebif@gmail.com">
+        <input type="hidden" name="redirect" value="https://site-noticias-a885f.web.app/Index.html">
+
         <label for="nomeId"><b>Nome:</b></label>
         <input type="text" name="nome" id="nomeId" placeholder="nome" required><br><br>
         <label for="emailId"><b>Email:</b></label>
-        <input type="email" name="email" id="emailId" placeholder="example@gmail.com" required><br><br>
+        <input type="email" name="replyto" id="emailId" placeholder="example@gmail.com" required><br><br>
         <label for="comentarioId"><b>Texto:</b></label>
-        <textarea rows="8" cols="54" name="comentário" id="comentarioId" placeholder="Escreva os seus comentários aqui..." required></textarea>
+        <textarea rows="8" cols="54" name="comentario" id="comentarioId" placeholder="Escreva os seus comentários aqui..." required></textarea>
 
         <br><br>
-        <input type="submit" value="Enviar">
+        <input type="submit" name="btEnviar" value="Enviar"> 
         </div>
 
         </form> 
